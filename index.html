@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejaswini N - FLN Specialist & Curriculum Developer</title>
-    <meta name="description" content="Portfolio of Tejaswini N, Primary Mathematics FLN Specialist & Curriculum Developer. Explore curriculum design expertise, measurable impact, and interactive service pathways.">
+    <meta name="description"
+        content="Portfolio of Tejaswini N, Primary Mathematics FLN Specialist & Curriculum Developer. Explore curriculum design expertise, measurable impact, and interactive service pathways.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="scroll-progress-container">
         <div class="scroll-progress-bar" id="scroll-progress"></div>
     </div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <div class="theme-switcher-handle" title="Change Theme">🎨</div>
+        <div class="theme-switcher-content">
+            <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-main);">Select Theme</h4>
+            <div class="theme-options" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+                <button class="theme-btn" data-theme="light-saas"
+                    style="background: linear-gradient(135deg, #6366f1, #a855f7);" title="Light Modern SaaS"></button>
+                <button class="theme-btn" data-theme="dark-minimal"
+                    style="background: linear-gradient(135deg, #38bdf8, #818cf8);" title="Dark Minimal"></button>
+                <button class="theme-btn" data-theme="light-earth"
+                    style="background: linear-gradient(135deg, #059669, #ea580c);" title="Light Earth"></button>
+                <button class="theme-btn" data-theme="dark-midnight"
+                    style="background: linear-gradient(135deg, #c084fc, #38bdf8);" title="Dark Midnight"></button>
+            </div>
+            <div class="custom-color-picker"
+                style="margin-top: 1.5rem; border-top: 1px solid var(--surface-border); padding-top: 1rem;">
+                <p style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 0.5rem; font-weight: 600;">Custom
+                    Base Color:</p>
+                <input type="color" id="theme-color-picker" value="#6366f1"
+                    style="width: 100%; height: 40px; border: none; border-radius: 8px; cursor: pointer; background: transparent;">
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--text-muted); line-height: 1.4;">Explore
+                world-class light and dark modes, or set your own accent color.</p>
+        </div>
+    </div>
+
+    <!-- Interactive Media Modal -->
     <div class="cursor-glow"></div>
 
     <div id="vanta-bg"></div>
@@ -29,16 +63,17 @@
             </button>
             <nav class="nav-links">
                 <a href="#about">About</a>
+                <a href="#case-studies">Case Studies</a>
                 <a href="#skills">Expertise</a>
-                <a href="#playbook">Playbook</a>
                 <a href="#experience">Experience</a>
-                <a href="#fit-check">Fit Check</a>
-                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                <a href="#contact" class="btn btn-primary"
+                    style="margin-left:1rem; padding: 0.5rem 1.2rem; box-shadow:none;">Let's Talk</a>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- 1. Hero -->
         <section class="hero" id="home">
             <div class="container hero-content">
                 <div class="hero-layout">
@@ -47,13 +82,17 @@
                             <span class="pulse-dot"></span> Available for Remote &amp; Global Opportunities
                         </div>
                         <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Hello, I'm</p>
-                        <h1 class="title" data-aos="fade-up" data-aos-delay="200">Tejaswini N<br><span class="gradient-text">FLN Specialist &amp; Curriculum Developer</span></h1>
+                        <h1 class="title" data-aos="fade-up" data-aos-delay="200">Tejaswini N<br><span
+                                class="gradient-text">Curriculum Developer | Primary Mathematics &amp; FLN
+                                Specialist</span></h1>
                         <p class="description" data-aos="fade-up" data-aos-delay="300">
-                            Primary Mathematics Curriculum Specialist designing NIPUN Bharat, EGRA, and EGMA aligned foundational literacy and numeracy programs for Grades 1-5.
+                            Specialized in large-scale academic content development, curriculum R&amp;D, and
+                            foundational mathematics learning systems.
                         </p>
                         <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                            <a href="#experience" class="btn btn-primary">View My Work</a>
-                            <a href="Tejaswini_Resume__2026 (1).pdf" class="btn btn-outline" target="_blank" rel="noreferrer">View Resume</a>
+                            <a href="#case-studies" class="btn btn-primary">View My Work</a>
+                            <a href="Tejaswini_Resume__2026 (1).pdf" class="btn btn-outline" target="_blank"
+                                rel="noreferrer">Download Resume</a>
                         </div>
                     </div>
 
@@ -69,12 +108,14 @@
                             <div class="highlight-card">
                                 <span>02</span>
                                 <strong>Built for adoption</strong>
-                                <p>Teacher training, lesson flow, and multilingual usability considered from day one.</p>
+                                <p>Teacher training, lesson flow, and multilingual usability considered from day one.
+                                </p>
                             </div>
                             <div class="highlight-card">
                                 <span>03</span>
                                 <strong>Designed for engagement</strong>
-                                <p>Gamified learning ideas and child-friendly practice experiences that keep attention longer.</p>
+                                <p>Structured learning ideas and child-friendly practice experiences that keep attention
+                                    longer.</p>
                             </div>
                         </div>
                     </aside>
@@ -82,20 +123,62 @@
             </div>
         </section>
 
+        <!-- 2. Impact Strip (Top Section) -->
+        <section class="impact section bg-alt" id="impact" style="padding: 4rem 0;">
+            <div class="container">
+                <div class="impact-grid text-center" data-aos="fade-up"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div class="impact-minicard glass" style="padding: 1.5rem; border-radius: 16px;">
+                        <strong
+                            style="font-size: 1.6rem; color: var(--primary); display:block; margin-bottom:0.5rem;">25+
+                            Books</strong>
+                        <p style="margin: 0; color: var(--text-muted); font-weight:600;">Developed &amp; Revised</p>
+                    </div>
+                    <div class="impact-minicard glass" style="padding: 1.5rem; border-radius: 16px;">
+                        <strong style="font-size: 1.6rem; color: var(--primary); display:block; margin-bottom:0.5rem;">5
+                            Vedic Math</strong>
+                        <p style="margin: 0; color: var(--text-muted); font-weight:600;">Books Authored (Pan-India)</p>
+                    </div>
+                    <div class="impact-minicard glass" style="padding: 1.5rem; border-radius: 16px;">
+                        <strong
+                            style="font-size: 1.6rem; color: var(--primary); display:block; margin-bottom:0.5rem;">5000+
+                            Teachers</strong>
+                        <p style="margin: 0; color: var(--text-muted); font-weight:600;">Trained</p>
+                    </div>
+                    <div class="impact-minicard glass" style="padding: 1.5rem; border-radius: 16px;">
+                        <strong
+                            style="font-size: 1.6rem; color: var(--primary); display:block; margin-bottom:0.5rem;">AI-Assisted</strong>
+                        <p style="margin: 0; color: var(--text-muted); font-weight:600;">Curriculum Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About -->
         <section class="about section" id="about">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Crafting <span class="gradient-text">Knowledge</span></h2>
                 <div class="about-grid">
-                    <div class="about-text" data-aos="fade-up">
-                        <p>With 4 years of experience and a University 1st Rank in Mathematics, I specialize in developing structured learning pathways, multilingual curriculum adaptation, and gamified educational content.</p>
-                        <p>I bring proven expertise in academic leadership, AI-assisted curriculum design, and cross-functional collaboration with product, software, and QA teams to deliver scalable and impactful learning solutions.</p>
+                    <div class="about-text" data-aos="fade-up" style="color: #0f172a; font-weight: 500;">
+                        <p>With 4 years of experience, I specialize in developing <strong>structured learning
+                                pathways</strong>, <strong>multilingual curriculum adaptation</strong>, and
+                            <strong>gamified educational content</strong>.
+                        </p>
+                        <p>I bring proven expertise in academic leadership, <strong>AI-assisted curriculum
+                                design</strong>, and cross-functional collaboration with product, software, and QA teams
+                            to deliver scalable and <strong>impactful learning solutions</strong>.</p>
+                        <p
+                            style="font-weight: 600; color: var(--accent-1); margin-top: 1.5rem; border-left: 4px solid var(--accent-1); padding-left: 1rem;">
+                            My experience spans curriculum design, large-scale academic R&amp;D systems, and AI-assisted
+                            curriculum systems.
+                        </p>
                         <div class="stats">
                             <div class="stat-num">
                                 <h3>Grades 1-5</h3>
                                 <p>Core Focus Area</p>
                             </div>
                             <div class="stat-num">
-                                <h3>1000+</h3>
+                                <h3>5000+</h3>
                                 <p>Educators Trained</p>
                             </div>
                             <div class="stat-num">
@@ -108,14 +191,349 @@
             </div>
         </section>
 
-        <section class="skills section" id="skills">
+        <!-- 4. Case Studies (bg-alt) -->
+        <section class="case-studies section bg-alt" id="case-studies">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <p class="eyebrow">Deep Dives</p>
+                    <h2 class="section-title">Case <span class="gradient-text">Studies</span></h2>
+                    <p class="section-copy">Explore how I approach complex curriculum challenges, from structuring
+                        logical pathways to delivering interactive learning systems.</p>
+                </div>
+
+                <div class="case-studies-grid">
+                    <!-- Case Study 1: FLN -->
+                    <article class="case-card" data-aos="fade-up">
+                        <div class="case-header">
+                            <h3>FLN Learning Pathways</h3>
+                            <span class="tag">Curriculum Matrix &amp; Pathway Mapping</span>
+                        </div>
+                        <div class="case-blocks">
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-1)">Problem</h4>
+                                <p>The primary digital product lacked a sequential foundational numeracy pathway fully
+                                    localized and aligned with national parameters like NIPUN Bharat.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-2)">Approach</h4>
+                                <p>Developed a comprehensive curriculum matrix, mapped state competencies with global
+                                    best practices, and designed micro-learning touchpoints.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--primary)">Solution</h4>
+                                <p>Created a measurable, grade-wise pathway infused with structured assessment logic,
+                                    enabling product teams to scale content generation.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: #43e97b">Impact</h4>
+                                <p>Streamlined the content development lifecycle by 40% and provided a framework that
+                                    seamlessly bridges pedagogy and learning execution.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Case Study 2: Book Development -->
+                    <article class="case-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case-header">
+                            <h3>Large-Scale Mathematics Content Development</h3>
+                            <span class="tag">Book Authorship &amp; Revision</span>
+                        </div>
+                        <div class="case-blocks">
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-1)">Problem</h4>
+                                <p>Lack of standardized, concept-driven math content across schools.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-2)">Approach</h4>
+                                <p>Revised 20+ books and workbooks, and authored 5 comprehensive Vedic Math textbooks
+                                    from scratch.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--primary)">Solution</h4>
+                                <p>Structured content with strict concept progression and practice-based learning
+                                    modules.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: #43e97b">Impact</h4>
+                                <p>Adopted across pan-India schools, vastly improving long-term learning consistency and
+                                    test scores.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Case Study 3: Narayana System -->
+                    <article class="case-card" data-aos="fade-up">
+                        <div class="case-header">
+                            <h3>Scalable Curriculum System Design</h3>
+                            <span class="tag">System Design &amp; Remediation</span>
+                        </div>
+                        <div class="case-blocks">
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-1)">Problem</h4>
+                                <p>Inconsistent learning outcomes and uneven teaching standards across multiple school
+                                    branches.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-2)">Approach</h4>
+                                <p>Worked on structured curriculum systems including micro-schedules, uniform lesson
+                                    plans, and learner support interventions.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--primary)">Solution</h4>
+                                <p>Standardized curriculum delivery, integrated assessments with active remediation, and
+                                    designed a strictly structured academic flow.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: #43e97b">Impact</h4>
+                                <p>Ensured uniform learning across branches and dramatically improved overall teaching
+                                    effectiveness.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Case Study 4: AI Assisted Curriculum -->
+                    <article class="case-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case-header">
+                            <h3>AI-Assisted Curriculum Development (Chimple)</h3>
+                            <span class="tag">GenAI Prompt Engineering</span>
+                        </div>
+                        <div class="case-blocks">
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-1)">Problem</h4>
+                                <p>Manual content creation is time-consuming and inconsistent for scalable learning
+                                    platforms.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--accent-2)">Approach</h4>
+                                <p>Worked on GenAI-based content workflows and actively designed prompt frameworks for
+                                    academic content generation.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: var(--primary)">Solution</h4>
+                                <p>Automated question generation streams and enforced strictly structured,
+                                    curriculum-aligned outputs.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4 style="color: #43e97b">Impact</h4>
+                                <p>Drastically improved pure content efficiency and supported scalable curriculum
+                                    development at the system level.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Published Work (USP) -->
+        <!-- Published Work (USP) -->
+        <section class="publications section" id="publications" style="padding: 6rem 0; background: var(--bg-color);">
+            <div class="container">
+                <div class="section-heading" style="text-align: center;" data-aos="fade-up">
+                    <p class="eyebrow" style="justify-content: center;">Content Authoring Focus</p>
+                    <h2 class="section-title">Published Work &amp; <span class="gradient-text">Content Leadership</span>
+                    </h2>
+                </div>
+
+                <!-- 5 Books Grid Layout -->
+                <div class="books-static-grid" data-aos="fade-up">
+                    <div class="book-card-static">
+                        <img src="assets/g1coverpage.png" alt="Grade 1 Cover" class="book-cover-static"
+                            style="object-fit:contain; background:white; padding:0; border:none; border-left: 6px solid rgba(0,0,0,0.3);">
+                        <span class="auth-tag">Authored</span>
+                    </div>
+                    <div class="book-card-static">
+                        <img src="assets/g2coverpage.png" alt="Grade 2 Cover" class="book-cover-static"
+                            style="object-fit:contain; background:white; padding:0; border:none; border-left: 6px solid rgba(0,0,0,0.3);">
+                        <span class="auth-tag">Authored</span>
+                    </div>
+                    <div class="book-card-static">
+                        <img src="assets/g3coverpage.png" alt="Grade 3 Cover" class="book-cover-static"
+                            style="object-fit:contain; background:white; padding:0; border:none; border-left: 6px solid rgba(0,0,0,0.3);">
+                        <span class="auth-tag">Authored</span>
+                    </div>
+                    <div class="book-card-static">
+                        <img src="assets/g4coverpage.png" alt="Grade 4 Cover" class="book-cover-static"
+                            style="object-fit:contain; background:white; padding:0; border:none; border-left: 6px solid rgba(0,0,0,0.3);">
+                        <span class="auth-tag">Authored</span>
+                    </div>
+                    <div class="book-card-static">
+                        <img src="assets/g5coverpage.png" alt="Grade 5 Cover" class="book-cover-static"
+                            style="object-fit:contain; background:white; padding:0; border:none; border-left: 6px solid rgba(0,0,0,0.3);">
+                        <span class="auth-tag">Authored</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 1.15rem; color: var(--text-muted); margin-top: 2rem; font-weight: 500;"
+                    data-aos="fade-up">
+                    Authored Vedic Mathematics books (Grades 1–5), implemented across schools pan-India.
+                </p>
+
+                <!-- Featured Book CSS 3D Flipbook -->
+                <div class="featured-book-section glass" data-aos="fade-up"
+                    style="margin-top: 5rem; padding: 3rem 2rem; border-radius: 20px;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.8rem; color: var(--primary);">⭐ Featured Book: Grade 3 Vedic Mathematics
+                        </h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Selected pages
+                            demonstrating concept explanation, pedagogy, and practice design.</p>
+                    </div>
+
+                <div class="true-book-viewport" data-aos="zoom-in">
+                    <div class="true-book" id="true-book-interactive">
+                        <!-- Leaf 1: Cover -->
+                        <div class="true-leaf" onclick="flipBookPage(this)">
+                            <div class="true-leaf-front" style="padding:0;">
+                                <img src="assets/g3coverpage.png" alt="Grade 3 Cover" style="border-radius: 4px 14px 14px 4px;">
+                                <div class="click-to-open-badge">Click to open ➔</div>
+                            </div>
+                            <div class="true-leaf-back" style="padding:0;">
+                                <img src="assets/page2.png" alt="Preface">
+                            </div>
+                        </div>
+
+                        <!-- Leaf 2: Page 1 and 3 -->
+                        <div class="true-leaf" onclick="flipBookPage(this)">
+                            <div class="true-leaf-front" style="padding:0;">
+                                <img src="assets/page1.png" alt="Table of Contents">
+                            </div>
+                            <div class="true-leaf-back" style="padding:0;">
+                                <img src="assets/page3.png" alt="Concept Page">
+                            </div>
+                        </div>
+
+                        <!-- Leaf 3: Page 4 and 5 -->
+                        <div class="true-leaf" onclick="flipBookPage(this)">
+                            <div class="true-leaf-front" style="padding:0;">
+                                <img src="assets/page4.png" alt="Example Page">
+                            </div>
+                            <div class="true-leaf-back" style="padding:0;">
+                                <img src="assets/page5.png" alt="Practice Page">
+                            </div>
+                        </div>
+
+                        <!-- Leaf 4: Locked messages / Support -->
+                        <div class="true-leaf" style="pointer-events:none;">
+                            <div class="true-leaf-front">
+                                <div class="locked-page" style="border: 2px dashed rgba(0,0,0,0.1); border-radius: 12px; background: #fff;">
+                                    <span style="font-size:3rem; margin-bottom:1rem;">🔒</span>
+                                    <h4 style="font-size:1.5rem; margin-bottom:0.5rem; color:var(--primary);">Book Locked</h4>
+                                    <p style="color:var(--text-muted); font-size:1rem; margin:0; line-height:1.5;">End of sample preview.<br><br>Let's collaborate to build comprehensive learning materials.</p>
+                                </div>
+                            </div>
+                            <div class="true-leaf-back" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div
+                        style="margin-top: 3rem; text-align: center; border-top: 1px solid var(--surface-border); padding-top: 2.5rem;">
+                        <p
+                            style="font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                            “This sample represents my approach to structured content design, concept clarity, and
+                            learner engagement across all levels.”
+                        </p>
+                        <div
+                            style="background: rgba(255,255,255,0.03); display: inline-block; padding: 1.5rem 2rem; border-radius: 12px; border: 1px solid var(--surface-border);">
+                            <h4 style="color: var(--accent-1); margin-bottom: 1.2rem; font-size: 1.15rem;">Key
+                                Contributions</h4>
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                                <span class="tag"
+                                    style="background: transparent; border: 1px solid var(--accent-1); color: var(--accent-1);">Concept
+                                    structuring</span>
+                                <span class="tag"
+                                    style="background: transparent; border: 1px solid var(--accent-2); color: var(--accent-2);">Practice
+                                    design</span>
+                                <span class="tag"
+                                    style="background: transparent; border: 1px solid var(--accent-3); color: var(--accent-3);">Content
+                                    sequencing</span>
+                                <span class="tag"
+                                    style="background: transparent; border: 1px solid #43e97b; color: #43e97b;">Learner-friendly
+                                    explanation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum R&D Section -->
+        <section class="rnd section bg-alt" id="rnd">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <p class="eyebrow">Academic Strategy</p>
+                    <h2 class="section-title">Curriculum Research &amp; <span class="gradient-text">Development</span>
+                    </h2>
+                </div>
+                <div class="glass" style="padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--accent-2);"
+                    data-aos="fade-up">
+                    <p style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 1.5rem;">Worked
+                        in academic research and development for primary mathematics programs.</p>
+                    <div class="rnd-grid"
+                        style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div>
+                            <h4 style="color: var(--accent-1); margin-bottom:1rem; font-size: 1.2rem;">Designed
+                                structured curriculum systems including:</h4>
+                            <ul
+                                style="list-style-type: none; padding-left: 0; margin-bottom:0; color: var(--text-main);">
+                                <li style="margin-bottom:0.8rem; display:flex; gap:10px;">
+                                    <div
+                                        style="width:6px; height:6px; border-radius:50%; background:var(--accent-1); margin-top:8px;">
+                                    </div> Learner Support Programs (gap identification &amp; remediation)
+                                </li>
+                                <li style="margin-bottom:0.8rem; display:flex; gap:10px;">
+                                    <div
+                                        style="width:6px; height:6px; border-radius:50%; background:var(--accent-1); margin-top:8px;">
+                                    </div> Common Micro Schedules (daily &amp; monthly planning)
+                                </li>
+                                <li style="margin-bottom:0.8rem; display:flex; gap:10px;">
+                                    <div
+                                        style="width:6px; height:6px; border-radius:50%; background:var(--accent-1); margin-top:8px;">
+                                    </div> Lesson plans aligned with learning outcomes
+                                </li>
+                                <li style="display:flex; gap:10px;">
+                                    <div
+                                        style="width:6px; height:6px; border-radius:50%; background:var(--accent-1); margin-top:8px;">
+                                    </div> Continuous and tailored assessments
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-2); margin-bottom:1rem; font-size: 1.2rem;">Applied Pedagogy:
+                            </h4>
+                            <ul
+                                style="list-style-type: none; padding-left: 0; margin-bottom:1.5rem; color: var(--text-main);">
+                                <li style="margin-bottom:0.8rem; display:flex; gap:10px;">
+                                    <div
+                                        style="width:6px; height:6px; border-radius:50%; background:var(--accent-2); margin-top:8px;">
+                                    </div> Activity-based learning (Grades 1–2)
+                                </li>
+                                <li style="display:flex; gap:10px;">
+                                    <div
+                                        style="width:6px; height:6px; border-radius:50%; background:var(--accent-2); margin-top:8px;">
+                                    </div> Experiential learning (Grades 3–5)
+                                </li>
+                            </ul>
+                            <div
+                                style="background: rgba(255,255,255,0.05); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--surface-border); border-left: 4px solid #43e97b;">
+                                <p style="margin:0; font-size: 1rem;"><strong>Impact:</strong> Contributed to pan-India
+                                    scalable curriculum implementation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Skills (bg-alt) -->
+        <section class="skills section bg-alt" id="skills">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Areas of <span class="gradient-text">Expertise</span></h2>
                 <div class="skills-grid">
                     <div class="skill-card glass tilt-card" data-aos="fade-up">
                         <div class="icon">Interactive FLN</div>
                         <h3>FLN Curriculum Design</h3>
-                        <p>Designing NIPUN Bharat, EGRA, and EGMA aligned structured learning pathways for Mathematics.</p>
+                        <p>Designing NIPUN Bharat, EGRA, and EGMA aligned structured learning pathways for Mathematics.
+                        </p>
                     </div>
                     <div class="skill-card glass delay-1 tilt-card" data-aos="fade-up">
                         <div class="icon">Books &amp; Workbooks</div>
@@ -125,219 +543,139 @@
                     <div class="skill-card glass delay-2 tilt-card" data-aos="fade-up">
                         <div class="icon">Playful Learning</div>
                         <h3>Gamified Learning</h3>
-                        <p>Collaborating with software developers to design and structure engaging educational digital games.</p>
+                        <p>Collaborating with software developers to design and structure engaging digital educational
+                            games.</p>
                     </div>
                     <div class="skill-card glass tilt-card" data-aos="fade-up">
                         <div class="icon">Cross-Language</div>
                         <h3>Multilingual Content</h3>
-                        <p>Adapting curriculum across English, Kannada, Hindi, Marathi, and the Mozambique curriculum.</p>
+                        <p>Adapting curriculum across English, Kannada, Hindi, Marathi, and the Mozambique curriculum.
+                        </p>
                     </div>
                     <div class="skill-card glass delay-1 tilt-card" data-aos="fade-up">
                         <div class="icon">Teacher Enablement</div>
                         <h3>Teacher Capacity Building</h3>
-                        <p>Conducting transformative training workshops and creating effective NCERT-aligned lesson plans.</p>
+                        <p>Conducting transformative training workshops and creating effective NCERT-aligned lesson
+                            plans.</p>
                     </div>
                     <div class="skill-card glass delay-2 tilt-card" data-aos="fade-up">
                         <div class="icon">AI + EdTech</div>
                         <h3>AI &amp; EdTech Tools</h3>
-                        <p>Leveraging Generative AI, JIRA, and Confluence for agile academic planning and fast content iteration.</p>
+                        <p>Leveraging Generative AI, JIRA, and Confluence for agile planning and fast iteration.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="playbook section" id="playbook">
-            <div class="container">
-                <div class="section-heading" data-aos="fade-up">
-                    <p class="eyebrow">Interactive Service Explorer</p>
-                    <h2 class="section-title">How I Build <span class="gradient-text">Learning Systems</span></h2>
-                    <p class="section-copy">Visitors can switch between the kinds of work I deliver and immediately understand the process, strengths, and outputs behind each engagement.</p>
-                </div>
-                <div class="playbook-shell glass" data-aos="fade-up">
-                    <div class="playbook-tabs" role="tablist" aria-label="Service playbook tabs">
-                        <button class="playbook-tab active" data-playbook="design" role="tab" aria-selected="true">Curriculum Design</button>
-                        <button class="playbook-tab" data-playbook="content" role="tab" aria-selected="false">Content Systems</button>
-                        <button class="playbook-tab" data-playbook="training" role="tab" aria-selected="false">Teacher Training</button>
-                    </div>
-                    <div class="playbook-panel active" data-panel="design">
-                        <div>
-                            <p class="eyebrow">Phase 01</p>
-                            <h3>From standards to a clear learning arc.</h3>
-                            <p>I map competencies, break them into teachable milestones, and shape progression that keeps foundational numeracy measurable and classroom-ready.</p>
-                        </div>
-                        <ul class="playbook-list">
-                            <li>NIPUN Bharat, EGRA, and EGMA alignment</li>
-                            <li>Grade-wise sequencing for concepts, fluency, and practice</li>
-                            <li>Assessment touchpoints built into the pathway</li>
-                        </ul>
-                    </div>
-                    <div class="playbook-panel" data-panel="content">
-                        <div>
-                            <p class="eyebrow">Phase 02</p>
-                            <h3>Content that children can use and teams can scale.</h3>
-                            <p>I turn the learning arc into lessons, workbooks, game prompts, and multilingual resources that are practical for both classroom and product teams.</p>
-                        </div>
-                        <ul class="playbook-list">
-                            <li>Books, worksheets, and guided practice structures</li>
-                            <li>Gamified question design for digital products</li>
-                            <li>Cross-language adaptation without losing pedagogy</li>
-                        </ul>
-                    </div>
-                    <div class="playbook-panel" data-panel="training">
-                        <div>
-                            <p class="eyebrow">Phase 03</p>
-                            <h3>Teacher readiness that improves implementation quality.</h3>
-                            <p>I translate curriculum intent into training experiences so educators know what to teach, why it matters, and how to deliver it confidently.</p>
-                        </div>
-                        <ul class="playbook-list">
-                            <li>Workshop design for large educator cohorts</li>
-                            <li>NCERT-aligned lesson planning support</li>
-                            <li>Feedback loops for continuous improvement</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- 7. Experience -->
         <section class="portfolio section" id="experience">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Professional <span class="gradient-text">Experience</span></h2>
+                <h2 class="section-title" data-aos="fade-up">Professional <span class="gradient-text">Experience
+                        Timeline</span></h2>
                 <div class="portfolio-grid">
                     <article class="portfolio-card glass tilt-card" data-aos="fade-up">
-                        <div class="card-image" style="background: linear-gradient(135deg, #ff6b6b, #556270); position:relative;">
-                            <div style="position:absolute; bottom: 1rem; left: 1rem; color: white; font-weight: bold; font-size: 1.2rem;">Sutara Learning Foundation</div>
+                        <div class="card-image"
+                            style="background: linear-gradient(135deg, #1e3a8a, #8b5cf6); position:relative; overflow:hidden;">
+                            <div
+                                style="position:absolute; bottom: 1.5rem; left: 1.5rem; color: white; font-weight: 800; font-size: 1.4rem;">
+                                Sutara Learning<br>Foundation</div>
                         </div>
                         <div class="card-content">
-                            <span class="tag">Jan 2025 - Present | Bangalore</span>
+                            <span class="tag" style="color:var(--accent-1);">Jan 2025 - Present | Bangalore</span>
                             <h3>Curriculum Developer - FLN</h3>
-                            <p>Designing NIPUN, EGRA, and EGMA aligned foundational numeracy curriculum for primary grades while contributing to robust educational solutions at Chimple.</p>
-                            <button class="read-more detail-toggle" type="button" data-target="detail-1">View highlights</button>
-                            <div class="detail-panel" id="detail-1">
-                                <ul>
-                                    <li>Structured foundational numeracy pathways for primary grades</li>
-                                    <li>Worked with digital product teams on engaging learning experiences</li>
-                                    <li>Balanced pedagogy, usability, and assessment flow</li>
-                                </ul>
-                            </div>
+                            <p>Working on AI-powered curriculum systems and GenAI-based content workflows to automate
+                                structured learning pathways at Chimple.</p>
                         </div>
                     </article>
                     <article class="portfolio-card glass delay-1 tilt-card" data-aos="fade-up">
-                        <div class="card-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe); position:relative;">
-                            <div style="position:absolute; bottom: 1rem; left: 1rem; color: white; font-weight: bold; font-size: 1.2rem;">NSPIRA (Narayana Schools)</div>
+                        <div class="card-image"
+                            style="background: linear-gradient(135deg, #f97316, #fbcfe8); position:relative; overflow:hidden;">
+                            <div
+                                style="position:absolute; bottom: 1.5rem; left: 1.5rem; color: #1e293b; font-weight: 800; font-size: 1.4rem;">
+                                NSPIRA<br>(Narayana Schools)</div>
+                            <div style="position:absolute; top: -20px; right: -20px; font-size: 10rem; opacity: 0.1;">🏫
+                            </div>
                         </div>
                         <div class="card-content">
-                            <span class="tag">Mar 2022 - Feb 2025 | Hyderabad</span>
+                            <span class="tag" style="color:var(--accent-2);">Mar 2022 - Feb 2025 | Hyderabad</span>
                             <h3>Resource Person &amp; Math Specialist</h3>
-                            <p>Led educational content strategy, created innovative lesson plans, and conducted teacher training sessions impacting more than 1000 educators.</p>
-                            <button class="read-more detail-toggle" type="button" data-target="detail-2">View highlights</button>
-                            <div class="detail-panel" id="detail-2">
-                                <ul>
-                                    <li>Designed lesson plans and math content systems across grades</li>
-                                    <li>Conducted teacher training for more than 1000 educators</li>
-                                    <li>Supported academic delivery with scalable classroom resources</li>
-                                </ul>
-                            </div>
+                            <p>Worked in academic R&amp;D for large-scale curriculum systems. Led development and
+                                revision of 20+ books and 5 authored publications.</p>
                         </div>
                     </article>
                     <article class="portfolio-card glass delay-2 tilt-card" data-aos="fade-up">
-                        <div class="card-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7); position:relative;">
-                            <div style="position:absolute; bottom: 1rem; left: 1rem; color: #1a1a1a; font-weight: bold; font-size: 1.2rem;">Academic Authorship</div>
+                        <div class="card-image"
+                            style="background: linear-gradient(135deg, #43e97b, #38f9d7); position:relative; overflow:hidden;">
+                            <div
+                                style="position:absolute; bottom: 1.5rem; left: 1.5rem; color: #1a1a1a; font-weight: 800; font-size: 1.4rem;">
+                                Academic Authorship</div>
+                            <div style="position:absolute; top: -20px; right: -20px; font-size: 10rem; opacity: 0.1;">📚
+                            </div>
                         </div>
                         <div class="card-content">
-                            <span class="tag">Published Works</span>
+                            <span class="tag" style="color:#0ea5e9;">Published Works</span>
                             <h3>Vedic Maths &amp; Abacus Books</h3>
-                            <p>Authored Grade I-V Vedic Maths academic books for Narayana Schools during 2024-2025, contributing to enhanced and structured learning experiences.</p>
-                            <button class="read-more detail-toggle" type="button" data-target="detail-3">View highlights</button>
-                            <div class="detail-panel" id="detail-3">
-                                <ul>
-                                    <li>Published structured books for primary mathematics enrichment</li>
-                                    <li>Connected concept-building with accessible student practice</li>
-                                    <li>Created resources that support consistency across classrooms</li>
-                                </ul>
-                            </div>
+                            <p>Authored Grade I-V Vedic Maths academic books for Narayana Schools during 2024-2025,
+                                contributing to structured learning.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="impact section" id="impact">
+        <!-- NEW: Achievements Section -->
+        <section class="achievements section" id="achievements">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Quantifiable <span class="gradient-text">Impact</span></h2>
-                <div class="impact-grid">
-                    <div class="stat-card glass" data-aos="fade-up">
-                        <h3 class="gradient-text count-up" data-target="1000" data-suffix="+">0</h3>
-                        <p>Educators Trained</p>
-                    </div>
-                    <div class="stat-card glass delay-1" data-aos="fade-up">
-                        <h3 class="gradient-text">1st Rank</h3>
-                        <p>University M.Sc. Math</p>
-                    </div>
-                    <div class="stat-card glass delay-2" data-aos="fade-up">
-                        <h3 class="gradient-text count-up" data-target="5" data-suffix="+">0</h3>
-                        <p>Curriculums Adapted</p>
-                    </div>
-                    <div class="stat-card glass" data-aos="fade-up">
-                        <h3 class="gradient-text count-up" data-target="5">0</h3>
-                        <p>Published Academic Books</p>
-                    </div>
+                <div class="section-heading" data-aos="fade-up">
+                    <p class="eyebrow">Milestones</p>
+                    <h2 class="section-title">Academic <span class="gradient-text">Achievements</span></h2>
                 </div>
-            </div>
-        </section>
-
-        <section class="fit-check section" id="fit-check">
-            <div class="container">
-                <div class="fit-check-shell glass" data-aos="fade-up">
-                    <div class="fit-check-copy">
-                        <p class="eyebrow">Project Fit Check</p>
-                        <h2>What kind of support are you looking for?</h2>
-                        <p>Choose the area that matches your need. This gives visitors a simple way to stay engaged and see where my experience fits their project.</p>
-                        <div class="fit-options" role="listbox" aria-label="Project fit options">
-                            <button type="button" class="fit-option active" data-fit="fln">FLN Program Design</button>
-                            <button type="button" class="fit-option" data-fit="training">Teacher Training</button>
-                            <button type="button" class="fit-option" data-fit="content">Books &amp; Worksheets</button>
-                            <button type="button" class="fit-option" data-fit="digital">Gamified Math Content</button>
+                <div class="achievements-grid"
+                    style="display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto;"
+                    data-aos="fade-up">
+                    <div class="glass"
+                        style="padding: 1.5rem 2rem; border-radius: 12px; display: flex; align-items: center; gap: 1.5rem; border-left: 4px solid var(--accent-2); background: var(--surface-color);">
+                        <span style="font-size: 2.5rem; text-shadow: 0 2px 5px rgba(0,0,0,0.2);">🥇</span>
+                        <div>
+                            <h4 style="margin: 0 0 0.2rem 0; font-size: 1.3rem; color: var(--primary);">Centum Scorer
+                            </h4>
+                            <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">(Intermediate &amp;
+                                University level)</p>
                         </div>
                     </div>
-                    <div class="fit-result">
-                        <div class="fit-result-card active" data-fit-result="fln">
-                            <span class="fit-badge">Best match</span>
-                            <h3>FLN Program Design</h3>
-                            <p>Ideal if you need grade-wise numeracy pathways, measurable progression, and curriculum mapped to NIPUN Bharat, EGRA, or EGMA outcomes.</p>
-                            <a href="#contact" class="btn btn-primary">Discuss an FLN project</a>
+                    <div class="glass"
+                        style="padding: 1.5rem 2rem; border-radius: 12px; display: flex; align-items: center; gap: 1.5rem; border-left: 4px solid var(--accent-3); background: var(--surface-color);">
+                        <span style="font-size: 2.5rem; text-shadow: 0 2px 5px rgba(0,0,0,0.2);">📚</span>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.3rem; color: var(--primary);">Authored 5 Vedic Maths
+                                Books</h4>
                         </div>
-                        <div class="fit-result-card" data-fit-result="training">
-                            <span class="fit-badge">Strong match</span>
-                            <h3>Teacher Training</h3>
-                            <p>Best for schools or programs that need workshops, lesson plan support, and stronger classroom implementation across educator teams.</p>
-                            <a href="#contact" class="btn btn-primary">Plan a training program</a>
-                        </div>
-                        <div class="fit-result-card" data-fit-result="content">
-                            <span class="fit-badge">Strong match</span>
-                            <h3>Books &amp; Worksheets</h3>
-                            <p>Great if you want well-structured print or practice content for Grades 1-5 with concept progression and learner-friendly sequencing.</p>
-                            <a href="#contact" class="btn btn-primary">Build content together</a>
-                        </div>
-                        <div class="fit-result-card" data-fit-result="digital">
-                            <span class="fit-badge">Ideal for EdTech</span>
-                            <h3>Gamified Math Content</h3>
-                            <p>Helpful when your product needs curriculum-backed game content, child-friendly flows, and collaboration between academic and product teams.</p>
-                            <a href="#contact" class="btn btn-primary">Explore game-based content</a>
+                    </div>
+                    <div class="glass"
+                        style="padding: 1.5rem 2rem; border-radius: 12px; display: flex; align-items: center; gap: 1.5rem; border-left: 4px solid #43e97b; background: var(--surface-color);">
+                        <span style="font-size: 2.5rem; text-shadow: 0 2px 5px rgba(0,0,0,0.2);">🏅</span>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.3rem; color: var(--primary);">Trained 5000+ Teachers</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact section" id="contact">
+        <!-- 8. Contact (bg-alt) -->
+        <section class="contact section bg-alt" id="contact">
             <div class="container contact-container glass" data-aos="fade-up">
                 <div class="contact-text">
                     <h2>Let's build better <br><span class="gradient-text">learning pathways.</span></h2>
-                    <p>Whether you need foundational literacy programs, gamified content, or advanced curriculum strategy, I am ready to collaborate.</p>
+                    <p>Whether you need foundational literacy programs, gamified content, or advanced curriculum
+                        strategy, I am ready to collaborate.</p>
                     <div class="contact-info">
-                        <a href="mailto:sritejaswini18@gmail.com" class="info-link">Email: sritejaswini18@gmail.com</a>
-                        <a href="tel:+919110505008" class="info-link">Call: +91 9110505008</a>
-                        <a href="https://www.linkedin.com/in/tejaswini-n-343b92175/" target="_blank" rel="noreferrer" class="info-link">LinkedIn Profile</a>
+                        <a href="mailto:sritejaswini18@gmail.com" class="info-link"><span
+                                style="font-size:1.5rem">✉️</span> sritejaswini18@gmail.com</a>
+                        <a href="tel:+919110505008" class="info-link"><span style="font-size:1.5rem">📞</span>
+                            Tap to Call</a>
+                        <a href="https://www.linkedin.com/in/tejaswini-n-343b92175/" target="_blank" rel="noreferrer"
+                            class="info-link"><span style="font-size:1.5rem">💼</span> LinkedIn Profile</a>
                     </div>
                 </div>
                 <form class="contact-form" id="contact-form">
@@ -351,7 +689,8 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Project Details</label>
-                        <textarea id="message" rows="4" required placeholder="Tell me about your curriculum needs..."></textarea>
+                        <textarea id="message" rows="4" required
+                            placeholder="Tell me about your curriculum needs..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
@@ -360,16 +699,31 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-alt">
         <div class="container footer-content">
             <div class="footer-logo">Tejaswini<span> N.</span></div>
             <p>&copy; <span id="year"></span> Tejaswini N - Curriculum Developer Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Interactive Media Modal -->
+    <div id="media-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content glass">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <h3 id="modal-title">Sample Title</h3>
+                <div class="modal-media-container">
+                    <img id="modal-image" src="" alt="Sample Document">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

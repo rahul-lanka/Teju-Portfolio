@@ -210,6 +210,47 @@ if (contactForm) {
     });
 }
 
+// Media Modal Logic
+const modal = document.getElementById('media-modal');
+const modalClose = document.querySelector('.modal-close');
+const modalBackdrop = document.querySelector('.modal-backdrop');
+const modalTitle = document.getElementById('modal-title');
+const modalImage = document.getElementById('modal-image');
+const interactiveCards = document.querySelectorAll('.interactive-card');
+
+function openModal(title, imgSrc) {
+    if (modal) {
+        modalTitle.textContent = title;
+        modalImage.src = imgSrc;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal() {
+    if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        setTimeout(() => { modalImage.src = ''; }, 300);
+    }
+}
+
+if (interactiveCards.length > 0) {
+    interactiveCards.forEach(card => {
+        card.addEventListener('click', () => {
+            openModal(card.dataset.modalTitle, card.dataset.modalImg);
+        });
+    });
+}
+
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+        closeModal();
+    }
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 updateScrollUI();
@@ -226,20 +267,114 @@ AOS.init({
 });
 
 // Initialize Vanta.js 3D Background
-if (window.VANTA) {
-    window.VANTA.NET({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x3dd9b4,
-        backgroundColor: 0x07111f,
-        points: 12.00,
-        maxDistance: 22.00,
-        spacing: 18.00
+let currentVanta = null;
+
+const themeConfig = {
+    'light-saas': { color: 0x6366f1, bgColor: 0xffffff },
+    'dark-minimal': { color: 0x38bdf8, bgColor: 0x000000 },
+    'light-earth': { color: 0x059669, bgColor: 0xfdfbf7 },
+    'dark-midnight': { color: 0xc084fc, bgColor: 0x0b0f19 }
+};
+
+let currentTheme = 'light-saas';
+
+function initVanta(themeKey, customColorInt = null) {
+    if (currentVanta) {
+        currentVanta.destroy();
+    }
+    
+    let vColor = customColorInt || (themeConfig[themeKey] ? themeConfig[themeKey].color : 0x6366f1);
+    
+    if (window.VANTA && themeConfig[themeKey]) {
+        currentVanta = window.VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: vColor,
+            backgroundColor: themeConfig[themeKey].bgColor,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+    }
+}
+
+// Theme Switching Logic
+const themeBtnsList = document.querySelectorAll('.theme-btn');
+
+function applyTheme(themeKey, customHexColor = null) {
+    document.body.className = document.body.className.replace(/theme-[a-z\-]+/g, '').trim();
+    document.body.classList.add(`theme-${themeKey}`);
+    localStorage.setItem('portfolio-theme', themeKey);
+    currentTheme = themeKey;
+    
+    themeBtnsList.forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.theme-btn[data-theme="${themeKey}"]`)?.classList.add('active');
+    
+    let vantaCustomColor = null;
+    if (customHexColor) {
+        document.body.style.setProperty('--accent-1', customHexColor);
+        document.body.style.setProperty('--accent-2', customHexColor);
+        localStorage.setItem('portfolio-custom-color', customHexColor);
+        vantaCustomColor = parseInt(customHexColor.replace('#', ''), 16);
+    } else {
+        document.body.style.removeProperty('--accent-1');
+        document.body.style.removeProperty('--accent-2');
+        localStorage.removeItem('portfolio-custom-color');
+    }
+    
+    initVanta(themeKey, vantaCustomColor);
+}
+
+themeBtnsList.forEach(btn => {
+    btn.addEventListener('click', () => {
+        applyTheme(btn.dataset.theme);
+        // Reset color picker block when clicking a predefined theme
+        const cp = document.getElementById('theme-color-picker');
+        if(cp) cp.value = "#6366f1"; 
     });
+});
+
+// Initial Theme Load
+const savedThemeSetting = localStorage.getItem('portfolio-theme') || 'light-saas';
+const savedCustomColor = localStorage.getItem('portfolio-custom-color');
+applyTheme(savedThemeSetting, savedCustomColor);
+
+// Setup Custom Color Picker
+const customColorPicker = document.getElementById('theme-color-picker');
+if (customColorPicker) {
+    if (savedCustomColor) {
+        customColorPicker.value = savedCustomColor;
+    }
+    customColorPicker.addEventListener('input', (e) => {
+        applyTheme(currentTheme, e.target.value);
+    });
+}
+
+// Flipbook page toggler
+function flipPage(el) {
+    el.classList.toggle('flipped');
+}
+
+let currentZIndex = 100;
+function flipBookPage(leaf) {
+    leaf.classList.toggle('flipped');
+    
+    // Check if book is currently open (any page flipped)
+    const book = leaf.closest('.true-book');
+    const flippedLeaves = book.querySelectorAll('.true-leaf.flipped');
+    
+    if(flippedLeaves.length > 0) {
+        book.classList.add('is-open');
+    } else {
+        book.classList.remove('is-open');
+    }
+
+    // Fix z-index stacking dynamically so the most recently flipped page is always on top
+    leaf.style.zIndex = currentZIndex++; 
 }
