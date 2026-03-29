@@ -205,8 +205,9 @@ if (contactForm) {
         const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
         const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject Details:\n${message}`);
 
-        formFeedback.textContent = 'Opening your email app so you can send the message directly.';
-        window.location.href = `mailto:sritejaswini18@gmail.com?subject=${subject}&body=${body}`;
+        formFeedback.textContent = 'Opening Gmail so you can send the message directly.';
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sritejaswini18@gmail.com&su=${subject}&body=${body}`;
+        window.open(gmailUrl, '_blank');
     });
 }
 
